@@ -73,20 +73,9 @@ function setFocusToSearchInput(event) {
     event.preventDefault();
     event.stopPropagation();
 
-    let toggleSwitchElement = document.querySelector(".search-toggle-switch");
-    if (toggleSwitchElement) {
-        toggleSwitchElement.style.display = "none";
-    }
-
-    let searchFormElement = document.querySelector(".search-form");
-    if (searchFormElement) {
-        searchFormElement.style.display = "block";
-    }
-
     let searchInputElement = document.getElementById("search-input");
     if (searchInputElement) {
         searchInputElement.focus();
-        searchInputElement.value = "";
     }
 }
 

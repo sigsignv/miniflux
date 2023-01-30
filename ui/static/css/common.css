@@ -256,24 +256,33 @@ a:hover {
     .search {
         text-align: right;
         display: block;
-        margin-top: 10px;
+        position: relative;
         margin-right: 5px;
     }
 
     .search-toggle-switch {
         display: block;
+        position: absolute;
+        top: 10px;
+        right: 0;
     }
 
     .search-form {
-        display: none;
+        position: relative;
+        opacity: 0;
+        z-index: -1;
     }
 
+    .search:focus-within .search-toggle-switch,
     .search-toggle-switch.has-search-query {
-        display: none;
+        opacity: 0;
+        z-index: -1;
     }
 
+    .search:focus-within .search-form,
     .search-form.has-search-query {
-        display: block;
+        opacity: unset;
+        z-index: unset;
     }
 }
 
